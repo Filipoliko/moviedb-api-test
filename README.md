@@ -1,5 +1,9 @@
 # The Movie DB Test
 
+[![Test Status](https://travis-ci.com/Filipoliko/tmdb-api-test.svg?branch=master)](https://travis-ci.com/Filipoliko/tmdb-api-test)
+
+This repository contains test suite for [The Movie Database](https://www.themoviedb.org/) API.
+
 ## Setup
 
 **Requirements:**
