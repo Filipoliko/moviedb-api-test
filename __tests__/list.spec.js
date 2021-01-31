@@ -44,10 +44,7 @@ describe('List', () => {
             const response = await frisby
                 .post(`${apiUrl}/list`, postValues)
                 .expect('status', 201)
-                .expect('jsonTypes', {
-                    status_message: Joi.string().required(),
-                    id: Joi.number().required()
-                })
+                .expect('jsonTypes', { id: Joi.number().required() })
                 .expect('json', { success: true });
 
             listId = response.json.id;
@@ -68,7 +65,6 @@ describe('List', () => {
             await frisby
                 .put(`${apiUrl}/list/${listId}`, updateValues)
                 .expect('status', 201)
-                .expect('jsonTypes', { status_message: Joi.string().required() })
                 .expect('json', { success: true });
 
             await frisby
